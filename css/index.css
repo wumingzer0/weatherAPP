@@ -1,0 +1,408 @@
+/*
+* @Author: Administrator
+* @Date:   2018-01-17 14:34:17
+* @Last Modified by:   15985_000
+* @Last Modified time: 2018-01-20 11:57:08
+*/
+/* 清楚浏览器默认样式 */
+*{
+	margin:0 ;
+	padding:0; 
+}
+body{
+	background: #F5F5F5;
+}
+.screen{
+	width: 100%;
+	height: 13.77rem;
+	/* url 图片所在位置 no-repeat不重复 图片位置 渐变色 */
+	background: url(../img/screen.png) no-repeat left bottom,-webkit-linear-gradient(top,#3bbcff,#43dbff);
+	background-size: contain;
+}
+.header{
+    width: 100%;
+    height: 1.58rem;
+    /* 文字大小 */
+    font-size: 0.6rem;
+    /* 文字颜色 */
+    color: white;
+    /* 文本加粗 */
+    font-weight: bold;
+    /* 文字水平居中 */
+    text-align: center;
+    /* 文字垂直居中 */
+    line-height: 1.58rem;
+}
+.screen .box{
+	width: 2.1rem;
+    height: 1.26rem;
+    background: rgb(241, 171, 98);
+    border-radius: 0.19rem;
+    margin-left: 0.27rem;
+    margin-top: 0.16rem;
+    /* 加padding 填充物 */
+    padding-top: 0.13rem;
+    /* 加padding 盒子变大 自定义盒模型 */
+    box-sizing: border-box;
+}
+.screen .box h2{
+	font-size: 0.3rem;
+	color: white;
+	text-align: center;
+
+}
+.screen .box h3{
+	font-size: 0.36rem;
+	color: white;
+	text-align: center;
+}
+.screen .title1{
+	width: 100%;
+	height: 1.75rem;
+	/* background: red;  */
+	font-size: 1.36rem;
+	color: white;
+	/* text-align: center; */
+	margin-top: 0.28rem;
+	line-height: 1.75rem;
+	padding-left: 0.75rem;
+	text-align: center;
+	box-sizing: border-box;
+}
+.screen .title2{
+	width: 100%;
+	height: 0.58rem;
+	/* background: black; */
+	font-size: 0.36rem;
+	color: white; 
+    text-align: center; 
+	margin-top: 0.45rem;
+	/* padding-left: 5.19rem; */
+	box-sizing: border-box;
+}
+.screen .title3{
+	width: 100%;
+	height: 0.6rem;
+	/* background: red; */
+	font-size: 0.36rem;
+	color: white;
+	text-align: center;
+	margin-top: 0.28rem;
+}
+.screen .title4{
+	width: 100%;
+	/* height: 0.42rem; */
+	/* background: red; */
+	font-size: 0.42rem;
+	color: white;
+	text-align: center;
+	margin-top: 1.14rem;
+}
+.con1{
+	width: 100%;
+	height: 2.94rem;
+	background: #fff;
+	border-bottom: 0.03rem solid #e4e4e4;
+	padding-top: 0.72rem;
+	padding-left: 0.58rem;
+    box-sizing: border-box;
+}
+.content{
+	width: 4.85rem;
+	height: 1.47rem;
+	/* background: pink; */
+	/* 边框 */
+	border-right: 0.03rem solid #e4e4e4;
+    /* 填充 */
+	padding-right: 0.59rem;
+	box-sizing: border-box;
+	float: left;
+
+}
+.con1 .content:nth-child(2){
+	padding-right: 0;
+	border-right: none;
+	padding-left: 0.59rem;
+	/* padding-top: 0.2rem; */
+}
+.content .top{
+	width: 100%;
+	height: 0.59rem;
+	/* background: yellow; */
+	/* 指定为弹性布局 */
+	display: flex;
+	/* 两端对齐 */
+	justify-content: space-between;
+}
+.content .top .day{
+	font-size: 0.37rem;
+    color: #434343;
+    line-height: 0.59rem;
+}
+.content .top .temperature{
+	font-size: 0.3rem;
+	color: #434343;
+	/* 垂直居中 */
+    line-height: 0.559rem;
+}
+.content .bottom{
+	width: 100%;
+	height: 0.86rem;
+	/* background: green; */
+	/* 指定为弹性布局 */
+	display: flex;
+	/* 两端对齐 */
+	justify-content: space-between;
+}
+.content .bottom .weather{
+	font-size: 0.36rem;
+	color: #434343;
+	line-height: 0.86rem;
+}
+.content .bottom .pic{
+    width: 0.5rem;
+	height: 0.5rem;
+	margin-top: 0.2rem;
+	/* background: red; */
+	/* 背景图片 */
+	/* background: url('../img/0.png') no-repeat; */
+	/* 图片大小 */
+	background-size: 0.48rem 0.48rem;
+	background-repeat: no-repeat;
+}
+.con2{
+	/* 边框 */
+	margin-top: 0.27rem;
+	border-top: 0.03rem solid #e4e4e4;
+	border-bottom: 0.03rem solid #e4e4e4;
+	background: white;
+	/* padding-top: 0.9rem; */
+	/* 上右下左填充 */
+    padding: 0.9rem 0 0.8rem 0;
+    box-sizing: border-box;
+    /* 超出部分以滚动条的方式显示 */
+    overflow-x: auto;
+}
+/* 消除滚动图标 */
+.con2::-webkit-scrollbar{
+	height: 0;
+}
+.con2 .wrap{
+	height: 100%;
+	/* float: left; */
+	display: flex;
+}
+.con2 .wrap .now{
+	width: 1.68rem;
+	height: 100%;
+	/* background: purple; */
+	/* 禁止缩小 */
+	flex-shrink: 0;
+	display: flex;
+	/* 改变主轴方向 */
+	flex-direction: column;
+	/* 两端对齐 */
+    justify-content: space-between;
+}
+.con2 .wrap .now .now_time{
+    font-size: 0.28rem;
+    color: #A6A6A6;
+    text-align: center;
+    font-weight: normal;
+}
+.con2 .wrap .now .now_icon{
+	width: 1rem;
+	height: 1rem;
+	/* 图片居中 */
+	margin: 0 auto;
+    /* background: url('../img/0.png') no-repeat; */
+    background-size: 1rem 1rem;
+    margin-top: 0.57rem;
+    background-repeat: no-repeat;
+}
+.con2 .wrap .now .now_temperature{
+	font-size: 0.28rem;
+    color: #A6A6A6;
+    /* 文字居中 */
+    text-align: center;
+    /* 消除文字加粗 */
+    font-weight: normal;
+}
+.con3{
+    height: 11.12rem;
+    width: 100%;
+    background: white;
+    margin-top: 0.27rem; 
+	border-bottom: 0.03rem solid #e4e4e4;
+	border-bottom: 0.03rem solid #e4e4e4;
+    padding: 0.9rem 0 0.8rem 0;
+    box-sizing: border-box;
+    border-top: 0.03rem solid #e4e4e4;
+	border-bottom: 0.03rem solid #e4e4e4;
+    box-sizing: border-box;
+    /* 超出部分以滚动条的方式显示 */
+    overflow-x: auto;
+}
+.con3::-webkit-scrollbar{
+	height: 0;
+}
+.con3 .wrap{
+	height: 100%; 
+	display: flex;
+	/* background: green; */
+}
+.con3 .wrap .recent{
+	width: 2.5rem;
+	height: 100%;
+	/* background: purple; */
+	/* 禁止缩小 */
+	flex-shrink: 0;
+	display: flex;
+	/* 改变主轴方向 */
+	flex-direction: column;
+	/* 两端对齐 */
+    justify-content: space-between;  
+}
+.con3 .wrap .recent .recent_time{
+	font-size: 0.28rem;
+	color: #A6A6A6;
+    text-align: center;
+    font-weight: normal;
+}
+.con3 .wrap .recent .recent_wea{
+	font-size: 0.28rem;
+	color: #A6A6A6;
+    text-align: center;
+    font-weight: normal;
+}
+.con3 .wrap .recent .recent_pic{
+	width: 1.5rem;
+	height: 1.5rem;
+	/* 图片居中 */
+	background-repeat: no-repeat;
+	margin: 0 auto; 
+    /* background: url('../img/2.png') no-repeat; */
+    background-size: 1rem 1rem;
+
+}
+.con3 .wrap .recent .recent_pic:nth-child(2){
+	background: url('../img/3.png') no-repeat;
+}
+.con3 .wrap .recent .recent_high{
+	font-size: 0.28rem;
+	color: #A6A6A6;
+    text-align: center;
+    font-weight: normal;
+}
+.con3 .wrap .recent .recent_low{
+	font-size: 0.28rem;
+	color: #A6A6A6;
+    text-align: center;
+    font-weight: normal;
+}
+.con3 .wrap .recent .recent_wind{
+	font-size: 0.28rem;
+	color: #A6A6A6;
+    text-align: center;
+    font-weight: normal;
+}
+.con3 .wrap .recent .recent_level{
+	font-size: 0.28rem;
+	color: #A6A6A6;
+    text-align: center;
+    font-weight: normal;
+}
+.city_box{
+	width: 100%;
+	height: 13.77rem;
+	/* background: red; */
+	position: absolute;
+	top: 0;
+	left:0; 
+}
+.city_box .sousuo_box{
+	width: 100%;
+	height: 1.26rem;
+	background:white;
+	border: 0.04rem solid #e4e4e4;
+	padding: 0.18rem 0.49rem 0.18rem 0.35rem;
+	box-sizing:border-box;
+	display: flex;
+	justify-content: space-between;
+}
+.city_box .sousuo_box .search_box{
+	width: 8.62rem;
+	height: 0.86rem;
+	background: #f2f2f2;
+	border-radius: 0.43rem;
+}
+.city_box .sousuo_box .button{
+	font-size: 0.36rem;
+	color: #434343;
+	line-height: 0.9rem;
+	/* 如何设置字体 */
+	font-family: "宋体";
+}
+/* 引入自定义字体 */
+.icon{
+	font-size: 0.6rem;
+	float: left;
+    margin-top: 0.15rem;
+	margin-left: 0.25rem; */
+}
+.text{
+	width: 7.2rem;
+	height: 100%;
+	background: #f2f2f2;
+	border: none;
+	float: left;
+	padding-left: 0.28rem;
+	box-sizing: border-box;
+}
+/* 获取焦点*/
+.text:focus{
+	outline: none;
+}
+.city{
+	width: 100%;
+	height: 14rem;
+	background: white;
+	padding: 0.24rem 0.35rem 0 0.36rem;
+	box-sizing: border-box;
+	overflow-y: auto;
+}
+.city .title{
+	height: 1.16rem;
+	width: 100%;
+	/* background: black; */
+	font-size: 0.38rem;
+	color: #434343;
+	line-height: 1.16rem;
+	/* 文字与文字之间的距离 */
+	letter-spacing: 0.03rem; 
+	/* text-align: center; */
+}
+
+.city .con{
+	width: 100%;
+	height: auto;
+    background: white;
+    /* 超出部分隐藏 */
+    overflow: hidden;
+}
+.city .con .son{
+	width: 3.17rem;
+	height: 0.81rem;
+	background: #f2f2f2;
+	border-radius: 0.4rem;
+	font-size: 0.32rem;
+	color: #434343;
+	text-align: center;
+	line-height: 0.81rem;
+	float: left;
+	margin: 0.22rem 0.25rem 0.21rem 0;
+
+}
+.city .con .son:nth-child(3n){
+	margin-right: 0;
+}
